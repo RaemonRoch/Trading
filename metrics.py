@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def sharpe_ratio(porfolio_value:list[float], rf:float=0.035) -> float: # Ramon
+def sharpe_ratio(porfolio_value:list[float], rf:float=0.035) -> float:
     """
     Calculate the annualized Sharpe Ratio for a given portfolio.
     This function computes the Sharpe Ratio by calculating the portfolio's periodic returns,
@@ -23,7 +23,7 @@ def sharpe_ratio(porfolio_value:list[float], rf:float=0.035) -> float: # Ramon
         print("Error calculating Sharpe Ratio:", e)
         return np.nan
 
-def sortino_ratio(porfolio_value:list[float], rf:float=0.035) -> float: # Mariana
+def sortino_ratio(porfolio_value:list[float], rf:float=0.035) -> float: 
     """
     Calculate the Sortino ratio for a given portfolio.
     The Sortino ratio measures the risk-adjusted return of an investment asset, portfolio,
@@ -60,7 +60,7 @@ def sortino_ratio(porfolio_value:list[float], rf:float=0.035) -> float: # Marian
         print("Error calculating Sharpe Ratio:", e)
         return np.nan    
     
-def maximum_drawdown(portfolio_value:list[float])->float: # Ramon
+def maximum_drawdown(portfolio_value:list[float])->float: 
     """
     Calculate the maximum drawdown of a portfolio based on its historical values.
     The function computes the drawdown by first determining the percentage change
@@ -82,7 +82,7 @@ def maximum_drawdown(portfolio_value:list[float])->float: # Ramon
         print("Error calculating Sharpe Ratio:", e)
         return np.nan 
     
-def win_rate(portfolio_value:list[float]) -> float: # Mariana
+def win_rate(portfolio_value:list[float]) -> float:
     """
     Calculates the average positive daily return (win rate) of a portfolio.
     This function converts a list of portfolio values into a pandas Series,
@@ -105,7 +105,7 @@ def win_rate(portfolio_value:list[float]) -> float: # Mariana
         print("Error calculating Sharpe Ratio:", e)
         return np.nan
     
-def calmar_ratio(valores_portafolio, periodos_anuales=8760): # General
+def calmar_ratio(valores_portafolio, periodos_anuales=8760): 
     """
     Calculate the Calmar Ratio for a given portfolio series.
     This function computes the Calmar Ratio as the ratio of the annualized return to the maximum drawdown observed
